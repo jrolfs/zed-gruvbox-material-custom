@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Is
 
-A Zed editor extension that bundles a custom Gruvbox Material dark theme with enhanced TypeScript/TSX tree-sitter highlights. Based on [tokiory/zed-gruvbox-material](https://github.com/tokiory/zed-gruvbox-material) with syntax color overrides baked directly into the theme JSON (eliminating the need for `theme_overrides` in Zed's `settings.json`).
+A Zed editor extension that bundles custom Gruvbox Material themes (dark + light) with enhanced TypeScript/TSX tree-sitter highlights. Based on [GaussianWonder/zed-gruvbox-material](https://github.com/GaussianWonder/zed-gruvbox-material) (v0.2.0 schema) with syntax color overrides on the dark variant baked directly into the theme JSON (eliminating the need for `theme_overrides` in Zed's `settings.json`). The light variant is included as-is from the upstream base.
 
 ## Development
 
@@ -16,11 +16,11 @@ The `grammars/tree-sitter-typescript` submodule is pinned to commit `e2c5359`. Z
 
 **`extension.toml`** — Extension metadata and grammar declarations. Both `typescript` and `tsx` grammars point to the same `zed-industries/tree-sitter-typescript` repo with different `path` values.
 
-**`themes/gruvbox-material-custom.json`** — Single dark theme. The `syntax` object contains all token colors including custom additions not in the upstream theme:
+**`themes/gruvbox-material-custom.json`** — Dark and light themes (schema v0.2.0). The dark variant's `syntax` object carries overrides on top of the GaussianWonder base plus custom additions:
+- Overrides from base: `attribute` (`#a9b665`), `constant` (`#d4be98`), `constructor` (`#89b482`), `function` (`font_weight: 400`), `label` (`#000000`), `variable.special` (`#e78a4e`)
 - `keyword.import`, `keyword.import.source`, `keyword.import.type` — granular import keyword coloring
 - `keyword.declaration`, `keyword.control` — keyword subcategories
-- `type.builtin` — predefined types like `string`, `number`, `boolean`
-- `keyword` uses `font_style: "normal"` to override the base theme's italic
+The light variant uses all GaussianWonder defaults with no overrides. The GaussianWonder base also provides tokens not in the old tokiory base: `function.builtin`, `function.method`, `variable.member`, `variable.parameter`, `namespace`, `selector`, `lifetime`, etc.
 
 **`languages/TypeScript/highlights.scm`** and **`languages/TSX/highlights.scm`** — Custom tree-sitter highlight queries that override Zed's built-in TypeScript/TSX highlighting. Key customizations:
 - **Keyword subcategories**: `@keyword.declaration` (const/let/var/function/class/enum/interface/type), `@keyword.control` (if/for/return/etc.), `@keyword.import` (import/export), `@keyword.import.source` (from), `@keyword.import.type` (the `type` keyword in type imports)
