@@ -1,0 +1,4 @@
+# Zed grammar build artifacts
+grammars/tsx/
+grammars/typescript/
+grammars/*.wasm
