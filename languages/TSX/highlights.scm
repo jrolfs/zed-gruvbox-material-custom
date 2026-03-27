@@ -33,7 +33,7 @@
   constructor: (identifier) @type)
 
 (nested_type_identifier
-  module: (identifier) @type)
+  module: (identifier) @namespace)
 
 ; Function and method definitions
 (function_expression

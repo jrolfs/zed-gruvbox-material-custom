@@ -239,6 +239,9 @@
           "constant": {
             "color": "#d4be98"
           },
+          "constant.builtin": {
+            "color": "#d3869b"
+          },
           "constant.comment.todo": {
             "color": "#e78a4e",
             "font_style": "italic"
@@ -247,7 +250,7 @@
             "color": "#89b482"
           },
           "embedded": {
-            "color": "#a9b665"
+            "color": "#d4be98"
           },
           "emphasis": {
             "font_style": "italic"
@@ -315,7 +318,7 @@
             "color": "#e78a4e"
           },
           "predictive": {
-            "color": "#7c6f64",
+            "color": "#d3869b",
             "font_style": "italic"
           },
           "preproc": {
@@ -397,10 +400,10 @@
             "color": "#e78a4e"
           },
           "variant": {
-            "color": "#d3869b"
+            "color": "#89b482"
           },
           "namespace": {
-            "color": "#d4be98"
+            "color": "#d3869b"
           },
           "selector": {
             "color": "#ea6962"
