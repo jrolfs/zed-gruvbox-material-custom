@@ -242,6 +242,21 @@
           "constant.builtin": {
             "color": "#d3869b"
           },
+          "type.class": {
+            "color": "#89b482"
+          },
+          "type.interface": {
+            "color": "#89b482"
+          },
+          "type.enum.member": {
+            "color": "#7daea3"
+          },
+          "variable.builtin": {
+            "color": "#d3869b"
+          },
+          "property.defaultLibrary": {
+            "color": "#d3869b"
+          },
           "constant.comment.todo": {
             "color": "#e78a4e",
             "font_style": "italic"
@@ -654,6 +669,21 @@
             "font_style": "italic"
           },
           "constant": {
+            "color": "#945e80"
+          },
+          "type.class": {
+            "color": "#4c7a5d"
+          },
+          "type.interface": {
+            "color": "#4c7a5d"
+          },
+          "type.enum.member": {
+            "color": "#45707a"
+          },
+          "variable.builtin": {
+            "color": "#945e80"
+          },
+          "property.defaultLibrary": {
             "color": "#945e80"
           },
           "constant.comment.todo": {

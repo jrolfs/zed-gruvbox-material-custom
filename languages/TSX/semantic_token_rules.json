@@ -1,0 +1,7 @@
+[
+  {
+    "token_type": "property",
+    "token_modifiers": ["defaultLibrary"],
+    "style": ["property.defaultLibrary", "variable.builtin"]
+  }
+]
