@@ -180,6 +180,28 @@
     (namespace_import
       (identifier) @type)))
 
+; Inline type re-exports: export { type Foo } or export { type Foo as Bar }
+(export_specifier
+  "type" @keyword.import.type
+  name: (identifier) @type)
+
+(export_specifier
+  "type" @keyword.import.type
+  alias: (identifier) @type)
+
+; Full type re-exports: export type { Foo } or export type { Foo as Bar }
+(export_statement
+  "type" @keyword.import.type
+  (export_clause
+    (export_specifier
+      name: (identifier) @type)))
+
+(export_statement
+  "type" @keyword.import.type
+  (export_clause
+    (export_specifier
+      alias: (identifier) @type)))
+
 ; type keyword in type alias declarations: type Foo = ...
 (type_alias_declaration "type" @keyword.declaration)
 
