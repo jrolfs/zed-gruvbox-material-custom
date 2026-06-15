@@ -729,6 +729,21 @@
           "keyword.comment.warn": {
             "color": "#b47109"
           },
+          "keyword.control": {
+            "color": "#c14a4a"
+          },
+          "keyword.declaration": {
+            "color": "#c35e0a"
+          },
+          "keyword.import": {
+            "color": "#945e80"
+          },
+          "keyword.import.source": {
+            "color": "#c14a4a"
+          },
+          "keyword.import.type": {
+            "color": "#c14a4a"
+          },
           "label": {
             "color": "#4c7a5d"
           },
